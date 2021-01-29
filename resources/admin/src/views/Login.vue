@@ -46,6 +46,7 @@ export default {
 .login {
   height: 100vh;
   display: flex;
+  background-color: #f0f2f5;
 }
 
 .login-card {

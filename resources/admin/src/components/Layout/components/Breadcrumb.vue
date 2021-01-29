@@ -1,10 +1,14 @@
 <template>
-  <transition-group class="ant-breadcrumb" tag="div" name="breadcrumb">
-    <a-breadcrumb-item v-for="i of breadCrumb" :key="i.id">
-      <router-link v-if="i.path" :to="i.path">{{ i.title }}</router-link>
-      <span v-else>{{ i.title }}</span>
-    </a-breadcrumb-item>
-  </transition-group>
+  <div>
+    <!-- <transition-group class="ant-breadcrumb" tag="div" name="breadcrumb"> -->
+      <a-breadcrumb>
+        <a-breadcrumb-item v-for="i of breadCrumb" :key="i.id">
+          <router-link v-if="i.path" :to="i.path">{{ i.title }}</router-link>
+          <span v-else>{{ i.title }}</span>
+        </a-breadcrumb-item>
+      </a-breadcrumb>
+    <!-- </transition-group> -->
+  </div>
 </template>
 
 <script>
@@ -73,4 +77,5 @@ export default {
 .breadcrumb-leave-active {
   position: absolute;
 }
+
 </style>
